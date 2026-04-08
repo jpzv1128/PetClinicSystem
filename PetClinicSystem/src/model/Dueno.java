@@ -21,7 +21,7 @@ public class Dueno {
 	public Dueno() {
 	}
 	/**
-	 * Constructor con parametros
+	 * Constructor con atrinutos
 	 * @param identificacion del dueño.
 	 * @param nombre del dueño.
 	 * @param telefono del dueño.
@@ -105,7 +105,11 @@ public class Dueno {
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
-	
+	/**
+	 * Devuelve los datos del dueno en formato texto.
+	 * 
+	 * @return Datos del dueno
+	 */
 	@Override
 	public String toString() {
 		return "Identificacion: " + identificacion + "\nNombre: " + nombre + "\nTelefono: " + telefono + "\nCorreo: " + correo + "\nDireccion: " + direccion;

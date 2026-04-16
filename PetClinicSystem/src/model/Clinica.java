@@ -17,7 +17,7 @@ import java.util.List;
 public class Clinica {
 	private String nombre;
 	private String direccion;
-	private int telefono;
+	private String telefono;
 	private String correo;
 	private String horarioAtencion;
 	private List <Mascota> mascotas;
@@ -47,7 +47,7 @@ public class Clinica {
 	 * @param correo Correo de la clinica
 	 * @param horarioAtencion Horario de atencion de la clinica
 	 */
-	public Clinica(String nombre, String direccion, int telefono, String correo, String horarioAtencion) {
+	public Clinica(String nombre, String direccion, String telefono, String correo, String horarioAtencion) {
 		this.nombre = nombre;
 		this.direccion = direccion;
 		this.telefono = telefono;
@@ -100,7 +100,7 @@ public class Clinica {
 	 * 
 	 * @return Telefono de la clinica
 	 */
-	public int getTelefono() {
+	public String getTelefono() {
 		return telefono;
 	}
 
@@ -109,7 +109,7 @@ public class Clinica {
 	 * 
 	 * @param telefono Nuevo telefono de la clinica
 	 */
-	public void setTelefono(int telefono) {
+	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
 

@@ -68,37 +68,37 @@ public class MenuPrincipal extends JFrame {
 		lblSubtitulo.setBounds(155, 50, 130, 20);
 		panelPrincipal.add(lblSubtitulo);
 
-		JButton btnDuenos = new JButton("Duenos");
+		JButton btnDuenos = new JButton("Dueños");
 		btnDuenos.setBackground(new Color(0, 153, 76));
-		btnDuenos.setForeground(Color.WHITE);
+		btnDuenos.setForeground(new Color(0, 0, 0));
 		btnDuenos.setFont(new Font("Arial", Font.BOLD, 14));
 		btnDuenos.setBounds(60, 100, 130, 35);
 		panelPrincipal.add(btnDuenos);
 
 		JButton btnMascotas = new JButton("Mascotas");
 		btnMascotas.setBackground(new Color(0, 153, 76));
-		btnMascotas.setForeground(Color.WHITE);
+		btnMascotas.setForeground(new Color(0, 0, 0));
 		btnMascotas.setFont(new Font("Arial", Font.BOLD, 14));
 		btnMascotas.setBounds(235, 100, 130, 35);
 		panelPrincipal.add(btnMascotas);
 
 		JButton btnVeterinarios = new JButton("Veterinarios");
 		btnVeterinarios.setBackground(new Color(0, 102, 204));
-		btnVeterinarios.setForeground(Color.WHITE);
+		btnVeterinarios.setForeground(new Color(0, 0, 0));
 		btnVeterinarios.setFont(new Font("Arial", Font.BOLD, 14));
 		btnVeterinarios.setBounds(60, 160, 130, 35);
 		panelPrincipal.add(btnVeterinarios);
 
 		JButton btnConsultas = new JButton("Consultas");
 		btnConsultas.setBackground(new Color(0, 102, 204));
-		btnConsultas.setForeground(Color.WHITE);
+		btnConsultas.setForeground(new Color(0, 0, 0));
 		btnConsultas.setFont(new Font("Arial", Font.BOLD, 14));
 		btnConsultas.setBounds(235, 160, 130, 35);
 		panelPrincipal.add(btnConsultas);
 
 		JButton btnCerrarSesion = new JButton("Cerrar Sesion");
 		btnCerrarSesion.setBackground(new Color(204, 51, 51));
-		btnCerrarSesion.setForeground(Color.WHITE);
+		btnCerrarSesion.setForeground(new Color(0, 0, 0));
 		btnCerrarSesion.setFont(new Font("Arial", Font.BOLD, 14));
 		btnCerrarSesion.setBounds(140, 220, 150, 35);
 		panelPrincipal.add(btnCerrarSesion);

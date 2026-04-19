@@ -11,7 +11,7 @@ package model;
 public class Dueno {
 	private String identificacion;
 	private String nombre;
-	private int telefono;
+	private String telefono;
 	private String correo;
 	private String direccion;
 	
@@ -28,7 +28,7 @@ public class Dueno {
 	 * @param correo del dueño.
 	 * @param direccion del dueño.
 	 */
-	public Dueno(String identificacion, String nombre, int telefono, String correo, String direccion) {
+	public Dueno(String identificacion, String nombre, String telefono, String correo, String direccion) {
 		this.identificacion = identificacion;
 		this.nombre = nombre;
 		this.telefono = telefono;
@@ -67,14 +67,14 @@ public class Dueno {
 	 * Obtiene el nombre del dueno.
 	 * @return El nombre del dueno.
 	 */
-	public int getTelefono() {
+	public String getTelefono() {
 		return telefono;
 	}
 	/**
 	 * Modifica el telefono del dueno.
 	 * @param telefono Nuevo telefono del dueno.
 	 */
-	public void setTelefono(int telefono) {
+	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
 	/**

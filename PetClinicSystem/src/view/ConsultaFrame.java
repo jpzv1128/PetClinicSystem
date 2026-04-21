@@ -390,9 +390,7 @@ public class ConsultaFrame extends JFrame {
 		}
 		return false;
 	}
-	/**
-	 * Limpia los campos de texto del formulario.
-	 */
+
 	public void limpiarCampos() {
 		tfIdConsulta.setText("");
 		tfFecha.setText("");

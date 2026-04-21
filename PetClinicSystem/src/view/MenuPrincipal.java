@@ -135,7 +135,9 @@ public class MenuPrincipal extends JFrame {
 
 		btnConsultas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(MenuPrincipal.this, "Aqui se abrira el modulo de consultas.");
+				ConsultaFrame consulta = new ConsultaFrame(clinica);
+				consulta.setVisible(true);	
+				setVisible(false);
 				
 			}
 		});

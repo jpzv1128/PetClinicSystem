@@ -252,7 +252,7 @@ public class VeterinarioFrame extends JFrame {
 			String id = tfIdVeterinario.getText().trim();
 
 			if (id.equals("")) {
-				JOptionPane.showMessageDialog(this, "Ingrese ID.");
+				JOptionPane.showMessageDialog(null, "Ingrese ID.");
 				return;
 			}
 
@@ -283,14 +283,14 @@ public class VeterinarioFrame extends JFrame {
 			temp.renameTo(archivo);
 
 			if (eliminado) {
-				JOptionPane.showMessageDialog(this, "Eliminado.");
+				JOptionPane.showMessageDialog(null, "Eliminado.");
 				limpiarCampos();
 			} else {
-				JOptionPane.showMessageDialog(this, "No encontrado.");
+				JOptionPane.showMessageDialog(null, "No encontrado.");
 			}
 
 		} catch (IOException e) {
-			JOptionPane.showMessageDialog(this, e.getMessage());
+			JOptionPane.showMessageDialog(null, e.getMessage());
 		}
 	}
 	

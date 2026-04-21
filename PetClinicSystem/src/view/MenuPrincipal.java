@@ -127,7 +127,9 @@ public class MenuPrincipal extends JFrame {
 
 		btnVeterinarios.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(MenuPrincipal.this, "Aqui se abrira el modulo de Veterinarios.");
+				VeterinarioFrame veterinario = new VeterinarioFrame(clinica);
+				veterinario.setVisible(true);	
+				setVisible(false);
 			}
 		});
 
@@ -144,6 +146,11 @@ public class MenuPrincipal extends JFrame {
 				inicio.setVisible(true);
 				setVisible(false);
 			}
+		});
+		
+		btnCerrarSesion.addActionListener(e -> {
+			new InicioSesion(clinica).setVisible(true);
+			dispose();
 		});
 	}
 }

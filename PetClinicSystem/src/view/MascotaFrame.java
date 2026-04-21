@@ -170,10 +170,25 @@ public class MascotaFrame extends JFrame {
 		btnVolver.setFont(new Font("Arial", Font.BOLD, 13));
 		btnVolver.setBounds(430, 215, 140, 30);
 		contentPane.add(btnVolver);
+		
 
 		taInformacion = new JTextArea();
 		taInformacion.setBounds(40, 340, 622, 196);
 		contentPane.add(taInformacion);
+		
+		JButton btnCerrarSesion = new JButton("Cerrar Sesión");
+		btnCerrarSesion.setFont(new Font("Arial", Font.BOLD, 13));
+		btnCerrarSesion.setBounds(430, 260, 140, 30); 
+		btnCerrarSesion.setBackground(new Color(102, 0, 0));
+		btnCerrarSesion.setForeground(new Color(0, 0, 0));
+
+		btnCerrarSesion.addActionListener(e -> {
+			new InicioSesion(clinica).setVisible(true);
+			dispose();
+		});
+
+		contentPane.add(btnCerrarSesion);
+		
 
 		/**
 		 * Boton para guardar una mascota.

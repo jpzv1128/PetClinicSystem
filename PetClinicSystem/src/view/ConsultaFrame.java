@@ -1,6 +1,7 @@
 package view;
 
 import java.awt.Color;
+
 import java.awt.Font;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -25,6 +26,16 @@ import model.Mascota;
 import model.Veterinario;
 import model.Dueno;
 
+/**
+ * Clase ConsultaFrame.
+ * 
+ * Esta clase representa la ventana para registrar, mostrar y eliminar
+ * consultas en el sistema.
+ * 
+ * @author Jose Pablo Zavala Varela
+ * @author Sheilyn Zamora Sandoval
+ * @version 1.0
+ */
 public class ConsultaFrame extends JFrame {
 
 	private static final long serialVersionUID = 1L;
@@ -38,6 +49,11 @@ public class ConsultaFrame extends JFrame {
 	private JTextArea taMostrar;
 	private Clinica clinica;
 
+	/**
+	 * Constructor de la ventana de consultas.
+	 * 
+	 * @param clinica Clinica principal del sistema
+	 */
 	public ConsultaFrame(Clinica clinica) {
 		this.clinica = clinica;
 
@@ -117,6 +133,9 @@ public class ConsultaFrame extends JFrame {
 		tfIdVeterinario.setBounds(199, 304, 182, 30);
 		contentPane.add(tfIdVeterinario);
 
+		/**
+		 * Boton para guardar una consulta.
+		 */
 		JButton btnGuardar = new JButton("Guardar");
 		btnGuardar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -129,6 +148,9 @@ public class ConsultaFrame extends JFrame {
 		btnGuardar.setBounds(430, 80, 140, 30);
 		contentPane.add(btnGuardar);
 
+		/**
+		 * Boton para mostrar las consultas guardadas.
+		 */
 		JButton btnMostrar = new JButton("Mostrar");
 		btnMostrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -141,6 +163,10 @@ public class ConsultaFrame extends JFrame {
 		btnMostrar.setBounds(430, 125, 140, 30);
 		contentPane.add(btnMostrar);
 
+
+		/**
+		 * Boton para eliminar una consulta.
+		 */
 		JButton btnEliminar = new JButton("Eliminar");
 		btnEliminar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -153,6 +179,9 @@ public class ConsultaFrame extends JFrame {
 		btnEliminar.setBounds(430, 170, 140, 30);
 		contentPane.add(btnEliminar);
 
+		/**
+		 * Boton para volver al menu principal.
+		 */
 		JButton btnVolver = new JButton("Volver");
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -167,6 +196,10 @@ public class ConsultaFrame extends JFrame {
 		btnVolver.setBounds(430, 215, 140, 30);
 		contentPane.add(btnVolver);
 
+
+		/**
+		 * Boton para cerrar sesion y volver a la pantalla de inicio.
+		 */
 		JButton btnCerrarSesion = new JButton("Cerrar Sesión");
 		btnCerrarSesion.setFont(new Font("Arial", Font.BOLD, 13));
 		btnCerrarSesion.setBounds(430, 260, 140, 30);
@@ -187,6 +220,11 @@ public class ConsultaFrame extends JFrame {
 		contentPane.add(scrollPane);
 	}
 
+	/**
+	 * Guarda una consulta en el archivo de texto.
+	 * Valida que no exista una consulta con el mismo ID antes de guardar,
+	 * y verifica que la mascota y el veterinario existan en el sistema.
+	 */
 	public void guardarConsulta() {
 		try {
 			String idConsulta = tfIdConsulta.getText();
@@ -240,6 +278,9 @@ public class ConsultaFrame extends JFrame {
 		}
 	}
 
+	/**
+	 * Muestra todas las consultas almacenadas en el archivo de forma ordenada.
+	 */
 	public void mostrarConsultas() {
 		try {
 			File archivo = new File("consultas.txt");
@@ -270,7 +311,9 @@ public class ConsultaFrame extends JFrame {
 			JOptionPane.showMessageDialog(this, e.getMessage());
 		}
 	}
-
+	/**
+	 * Elimina una consulta del archivo de texto segun su identificacion.
+	 */
 	public void eliminarConsulta() {
 		try {
 			String id = tfIdConsulta.getText().trim();
@@ -318,6 +361,13 @@ public class ConsultaFrame extends JFrame {
 		}
 	}
 
+	/**
+	 * Verifica si un ID existe en la primera columna de un archivo de texto.
+	 * 
+	 * @param nombreArchivo Nombre del archivo donde buscar
+	 * @param id ID a buscar en el archivo
+	 * @return true si el ID existe, false si no existe
+	 */
 	public boolean existeEnArchivo(String nombreArchivo, String id) {
 		try {
 			File archivo = new File(nombreArchivo);
@@ -340,7 +390,9 @@ public class ConsultaFrame extends JFrame {
 		}
 		return false;
 	}
-
+	/**
+	 * Limpia los campos de texto del formulario.
+	 */
 	public void limpiarCampos() {
 		tfIdConsulta.setText("");
 		tfFecha.setText("");

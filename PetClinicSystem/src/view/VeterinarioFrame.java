@@ -25,6 +25,16 @@ import model.Veterinario;
 import javax.swing.JComboBox;
 import javax.swing.JTextArea;
 
+/**
+ * Clase VeterinarioFrame.
+ * 
+ * Esta clase representa la ventana para registrar, mostrar y eliminar
+ * veterinarios del sistema.
+ * 
+ * @author Jose Pablo Zavala Varela
+ * @author Sheilyn Zamora Sandoval
+ * @version 1.0
+ */
 
 public class VeterinarioFrame extends JFrame {
 	
@@ -37,6 +47,12 @@ public class VeterinarioFrame extends JFrame {
 	private JTextField tfTelefono;
 	private Clinica clinica;
 	private JTextArea taMostrar;
+	
+	/**
+	 * Constructor de la ventana de veterinario.
+	 * 
+	 * @param clinica Clinica principal del sistema
+	 */
 	
 	public VeterinarioFrame(Clinica clinica) {
 	    this.clinica = clinica;
@@ -107,6 +123,9 @@ public class VeterinarioFrame extends JFrame {
 		tfTelefono.setBounds(199, 304, 182, 30);
 		contentPane.add(tfTelefono);
 		
+		/**
+		 * Boton para guardar un veterinario.
+		 */
 		JButton btnGuardar = new JButton("Guardar");
 		btnGuardar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -119,6 +138,9 @@ public class VeterinarioFrame extends JFrame {
 		btnGuardar.setBounds(430, 80, 140, 30);
 		contentPane.add(btnGuardar);
 		
+		/**
+		 * Boton para mostrar un veterinario.
+		 */
 		JButton btnMostrar = new JButton("Mostrar");
 		btnMostrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -131,6 +153,9 @@ public class VeterinarioFrame extends JFrame {
 		btnMostrar.setBounds(430, 125, 140, 30);
 		contentPane.add(btnMostrar);
 		
+		/**
+		 * Boton para eliminar un veterinario.
+		 */
 		JButton btnEliminar = new JButton("Eliminar");
 		btnEliminar.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
@@ -143,6 +168,9 @@ public class VeterinarioFrame extends JFrame {
 		btnEliminar.setBounds(430, 170, 140, 30);
 		contentPane.add(btnEliminar);
 		
+		/**
+		 * Boton para volver al menu principal.
+		 */
 		JButton btnVolver = new JButton("Volver");
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -157,6 +185,9 @@ public class VeterinarioFrame extends JFrame {
 		btnVolver.setBounds(430, 215, 140, 30);
 		contentPane.add(btnVolver);
 
+		/**
+		 * Boton para volver al inicio de sesion.
+		 */
 		JButton btnCerrarSesion = new JButton("Cerrar Sesión");
 		btnCerrarSesion.setFont(new Font("Arial", Font.BOLD, 13));
 		btnCerrarSesion.setBounds(430, 260, 140, 30); 
@@ -177,6 +208,10 @@ public class VeterinarioFrame extends JFrame {
 		contentPane.add(scrollPane);
 	}
 	
+
+	/**
+	 * Metodo que guarda un veterinario.
+	 */
 	public void guardarVeterinario() {
 	    try {
 	        String id = tfIdVeterinario.getText();
@@ -218,6 +253,9 @@ public class VeterinarioFrame extends JFrame {
 	    }
 	}
 	
+	/**
+	 * Metodo que muestra un veterinario.
+	 */
 	public void mostrarVeterinarios() {
 	    try {
 	        File archivo = new File("veterinarios.txt");
@@ -247,6 +285,9 @@ public class VeterinarioFrame extends JFrame {
 	        JOptionPane.showMessageDialog(this, e.getMessage());
 	    }
 	}
+	/**
+	 * Metodo que elimina un veterinario.
+	 */
 	public void eliminarVeterinario() {
 		try {
 			String id = tfIdVeterinario.getText().trim();
@@ -294,6 +335,10 @@ public class VeterinarioFrame extends JFrame {
 		}
 	}
 	
+
+	/**
+	 * Limpia los campos de texto del formulario.
+	 */
 	public void limpiarCampos() {
 		tfIdVeterinario.setText("");
 		tfVeterinario.setText("");

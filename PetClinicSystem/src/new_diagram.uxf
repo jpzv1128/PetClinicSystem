@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>316</x>
+      <y>0</y>
+      <w>148</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Clinica
+--
+- String nombre;
+	- String direccion;
+	- String telefono;
+	- String correo;
+	- String horarioAtencion;
+	- List &lt;Mascota&gt; mascotas;
+	- List&lt;Dueno&gt; duenos;
+	- List&lt;Consulta&gt; consultas;
+	- List&lt;Veterinario&gt; veterinarios;
+
+--
++ Clinica()
++ Clinica(String, String, String, String, String)
++ getNombre(): String
++ setNombre(String): void
++ getDireccion(): String
++ setDireccion(String): void
++ getTelefono(): String
++ setTelefono(String): void
++ getCorreo(): String
++ setCorreo(String): void
++ getHorarioAtencion(): String
++ setHorarioAtencion(String): void
++ getMascotas(): List&lt;Mascota&gt;
++ setMascotas(List&lt;Mascota&gt;): void
++ getDuenos(): List&lt;Dueno&gt;
++ setDuenos(List&lt;Dueno&gt;): void
++ getConsultas(): List&lt;Consulta&gt;
++ setConsultas(List&lt;Consulta&gt;): void
++ getVeterinarios(): List&lt;Veterinario&gt;
++ setVeterinarios(List&lt;Veterinario&gt;): void
++ agregarMascota(Mascota): void
++ agregarDueno(Dueno): void
++ agregarConsultas(Consulta): void
++ agregarVeterinario(Veterinario): void
++ toString(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>148</x>
+      <y>364</y>
+      <w>100</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Dueno
+--
+- identificacion: String
+- nombre: String
+- telefono: String
+- correo: String
+- direccion: String
+--
++ Dueno(): Dueno
++ Dueno(String, String, String): Dueno
++ getIdentificacion(): String
++ setIdentificacion(String): void
++ getNombre(): String
++ setNombre(String): void
++ getTelefono(): String
++ mostrarInfo(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>308</x>
+      <y>380</y>
+      <w>116</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>Mascota
+--
+- idMascota: String
+- nombre: String
+- raza: String
+- especie: String
+- edad: int
+- sexo: String
+--
++ Mascota(): Mascota
++ Mascota(String, String, String): Mascota
++ getIdMascota(): String
++ setIdMascota(String): void
++ getNombre(): String
++ setNombre(String): void
++ getEspecie(): String
++ mostrarInfo(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>92</x>
+      <y>208</y>
+      <w>136</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Consulta
+--
+- idConsulta: String
+- mascota: Mascota
+- veterinario: Veterinario
+- clinica: Clinica
+- fecha: String
+- motivo: String
+- diagnostico: String
+--
++ Consulta(): Consulta
++ Consulta(String, Mascota, Veterinario): Consulta
++ getIdConsulta(): String
++ setIdConsulta(String): void
++ getMascota(): Mascota
++ getVeterinario(): Veterinario
++ getFecha(): String
++ mostrarInfo(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>472</x>
+      <y>364</y>
+      <w>124</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>Veterinario
+--
+- idVeterinario: String
+- nombre: String
+- especialidad: String
+- telefono: int
+- horario: String
+--
++ Veterinario(): Veterinario
++ Veterinario(String, String, String): Veterinario
++ getIdVeterinario(): String
++ setIdVeterinario(String): void
++ getNombre(): String
++ setNombre(String): void
++ getEspecialidad(): String
++ mostrarInfo(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>356</x>
+      <y>236</y>
+      <w>24</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+</panel_attributes>
+    <additional_attributes>10.0;360.0;20.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>244</x>
+      <y>236</y>
+      <w>108</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+</panel_attributes>
+    <additional_attributes>10.0;370.0;240.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>164</y>
+      <w>108</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+</panel_attributes>
+    <additional_attributes>10.0;250.0;240.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>212</y>
+      <w>40</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+</panel_attributes>
+    <additional_attributes>80.0;380.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>224</x>
+      <y>300</y>
+      <w>124</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2= 1
+</panel_attributes>
+    <additional_attributes>290.0;200.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>224</x>
+      <y>260</y>
+      <w>336</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>820.0;260.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>400</y>
+      <w>76</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+</diagram>

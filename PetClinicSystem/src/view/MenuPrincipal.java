@@ -111,25 +111,34 @@ public class MenuPrincipal extends JFrame {
 
 		btnDuenos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(MenuPrincipal.this, "Aqui se abrira el modulo de Duenos.");
+				DuenoFrame dueno = new DuenoFrame(clinica);
+				dueno.setVisible(true);
+				setVisible(false);
 			}
 		});
 
 		btnMascotas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(MenuPrincipal.this, "Aqui se abrira el modulo de Mascotas.");
-			}
+				MascotaFrame mascota = new MascotaFrame(clinica);
+				mascota.setVisible(true);	
+				setVisible(false);
+				}
 		});
 
 		btnVeterinarios.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(MenuPrincipal.this, "Aqui se abrira el modulo de Veterinarios.");
+				VeterinarioFrame veterinario = new VeterinarioFrame(clinica);
+				veterinario.setVisible(true);	
+				setVisible(false);
 			}
 		});
 
 		btnConsultas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(MenuPrincipal.this, "Aqui se abrira el modulo de Consultas.");
+				ConsultaFrame consulta = new ConsultaFrame(clinica);
+				consulta.setVisible(true);	
+				setVisible(false);
+				
 			}
 		});
 
@@ -139,6 +148,11 @@ public class MenuPrincipal extends JFrame {
 				inicio.setVisible(true);
 				setVisible(false);
 			}
+		});
+		
+		btnCerrarSesion.addActionListener(e -> {
+			new InicioSesion(clinica).setVisible(true);
+			dispose();
 		});
 	}
 }

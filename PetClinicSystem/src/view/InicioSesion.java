@@ -104,14 +104,14 @@ public class InicioSesion extends JFrame {
 
 		JButton btnIniciarSesion = new JButton("Iniciar Sesion");
 		btnIniciarSesion.setBackground(new Color(0, 153, 76));
-		btnIniciarSesion.setForeground(Color.WHITE);
+		btnIniciarSesion.setForeground(Color.BLACK);
 		btnIniciarSesion.setFont(new Font("Arial", Font.BOLD, 13));
 		btnIniciarSesion.setBounds(45, 170, 125, 30);
 		panelFormulario.add(btnIniciarSesion);
 
 		JButton btnRegistrarUsuario = new JButton("Registrar");
 		btnRegistrarUsuario.setBackground(new Color(0, 102, 204));
-		btnRegistrarUsuario.setForeground(Color.WHITE);
+		btnRegistrarUsuario.setForeground(Color.BLACK);
 		btnRegistrarUsuario.setFont(new Font("Arial", Font.BOLD, 13));
 		btnRegistrarUsuario.setBounds(185, 170, 115, 30);
 		panelFormulario.add(btnRegistrarUsuario);
